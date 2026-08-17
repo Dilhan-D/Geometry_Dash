@@ -1,93 +1,101 @@
-# Geometry Dash 
+# Geometry Dash
 
-Un clone du célèbre jeu Geometry Dash développé en Java avec JavaFX.
+Clone de **Geometry Dash** réalisé en **Java avec JavaFX**.
 
-## 🎮 Caractéristiques
+Le but du projet est de reproduire les principales mécaniques du jeu : déplacement automatique du joueur, saut, collisions avec les obstacles, effets visuels, musique et différents skins.
 
-- Gameplay basé sur le timing et les réflexes
-- Système de skins personnalisables (12 skins disponibles)
-- Effets visuels (particules, rotations)
-- Système de collision précis
-- Musique et effets sonores
-- Mode vol avec anneaux spéciaux
-- Obstacles variés (pics, blocs, anneaux)
+## Fonctionnalités
 
-## 🛠️ Technologies Utilisées
+* Déplacement automatique du joueur
+* Saut avec la touche `ESPACE`
+* Rotation du joueur pendant les sauts
+* Mode vol avec les anneaux
+* Plusieurs types d'obstacles
+* Système de collision
+* 12 skins disponibles
+* Effets de particules
+* Arrière-plan avec effet de parallaxe
+* Musique et effets sonores
+* Possibilité de couper la musique
+* Écran de fin de niveau
 
-- Java
-- JavaFX pour l'interface graphique
-- Système de gestion audio personnalisé
+## Technologies
 
-## 🏗️ Architecture du Projet
+* **Java**
+* **JavaFX**
+* Gestion audio avec un système dédié au projet
 
+## Structure du projet
+
+```text
 GeométrieDash/
 ├── src/
 │   ├── game/
-│   │   ├── Player.java         # Gestion du joueur
-│   │   ├── Level.java          # Création et gestion des niveaux
-│   │   ├── Input.java          # Gestion des entrées
-│   │   └── GameObject.java     # Interface de base
+│   │   ├── Player.java
+│   │   ├── Level.java
+│   │   ├── Input.java
+│   │   └── GameObject.java
+│   │
 │   ├── obstacles/
-│   │   ├── GameObstacle.java   # Classe de base des obstacles
-│   │   ├── Block.java          # Blocs sur lesquels atterrir
-│   │   ├── Spike.java          # Obstacles mortels
-│   │   └── FlyRing.java        # Anneaux donnant le mode vol
+│   │   ├── GameObstacle.java
+│   │   ├── Block.java
+│   │   ├── Spike.java
+│   │   └── FlyRing.java
+│   │
 │   ├── menu/
-│   │   ├── Menu.java           # Menu principal
-│   │   └── EndLevelScreen.java # Écran de fin de niveau
+│   │   ├── Menu.java
+│   │   └── EndLevelScreen.java
+│   │
 │   ├── audio/
-│   │   └── AudioManager.java   # Gestion de l'audio
+│   │   └── AudioManager.java
+│   │
 │   └── resources/
-│       ├── skins/              # Images des skins
-│       ├── icons/              # Icônes de l'interface
-│       └── Background.png      # Arrière-plan du jeu
+│       ├── skins/
+│       ├── icons/
+│       └── Background.png
 ```
 
-## 🎯 Fonctionnalités Principales
+### Quelques classes
 
-### Joueur
-- Saut avec la touche ESPACE
-- Rotation automatique en saut
-- Système de particules (trails)
-- Changement de skin
+* `Player` : gère le joueur, ses déplacements, ses sauts et ses effets.
+* `Level` : contient la logique du niveau et les différents éléments qui le composent.
+* `Input` : gère les entrées du clavier.
+* `GameObject` : interface commune aux objets du jeu.
+* `GameObstacle` : classe de base pour les différents obstacles.
+* `AudioManager` : s'occupe de la musique et des effets sonores.
+* `Menu` : gère le menu principal et la sélection des skins.
 
-### Niveau
-- Obstacles placés stratégiquement
-- Système de collision sophistiqué
-- Fond parallaxe
-- Sol avec motif en grille
+## Contrôles
 
-### Interface
-- Menu principal avec sélection de skin
-- Bouton mute pour la musique
-- Écran de fin de niveau
+| Touche   | Action              |
+| -------- | ------------------- |
+| `ESPACE` | Saut / Vol          |
+| `ESC`    | Retour au menu      |
+| Clic     | Sélection d'un skin |
 
-## 🎵 Audio
-- Musique de jeu
-- Musique de menu
-- Système de mute/unmute
+## Installation
 
-## 🎮 Contrôles
-- ESPACE : Saut/Vol
-- ESC : Retour au menu
-- Clic sur les skins pour changer d'apparence
+### Prérequis
 
-## 🔧 Installation et Lancement
+* Java 11 ou supérieur
+* JavaFX 11 ou supérieur
+* Un IDE Java compatible, par exemple IntelliJ IDEA ou Eclipse
 
-1. Assurez-vous d'avoir Java et JavaFX installés
-2. Clonez le repository
-3. Compilez le projet
-4. Lancez le jeu via la classe principale Main.java
+### Lancement
 
-## 🚀 Prérequis
+1. Cloner le projet.
+2. Ouvrir le projet dans l'IDE.
+3. Vérifier que JavaFX est correctement configuré.
+4. Compiler le projet.
+5. Lancer `Main.java`.
 
-- Java 11 ou supérieur
-- JavaFX 11 ou supérieur
-- Un IDE compatible Java (Eclipse, IntelliJ, etc.)
+## Améliorations possibles
 
-## 🔧 Améliorations Possibles
-- Ajout de nouveaux niveaux
-- Plus de types d'obstacles
-- Système de score
-- Sauvegarde de la progression
-- Mode éditeur de niveau
+Quelques fonctionnalités pourraient être ajoutées par la suite :
+
+* Plusieurs niveaux
+* Davantage de types d'obstacles
+* Système de score
+* Sauvegarde de la progression
+* Éditeur de niveaux
+* Davantage de skins et de personnalisations
